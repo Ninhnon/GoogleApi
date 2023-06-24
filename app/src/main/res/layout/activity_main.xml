@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MainActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
+        <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:queryHint="Thử tìm một vị trí bất kỳ"
+        android:iconifiedByDefault="false"
+        android:elevation="5dp"
+        android:queryBackground="@android:color/transparent"
+        android:background="@drawable/bg_search_view"
+        android:searchIcon="@drawable/ic_ggmap"/>
+        <ImageButton
+        android:id="@+id/optionMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/baseline_more_vert_32"
+        android:contentDescription="options_menu"/>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_route"
+        android:src="@drawable/outline_draw_24"
+        app:fabSize="normal"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:tint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="200dp" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_eraser"
+        android:src="@drawable/baseline_refresh_24"
+        app:fabSize="normal"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:tint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="120dp" />
+</RelativeLayout>
